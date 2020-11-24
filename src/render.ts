@@ -15,7 +15,7 @@ export function clearCanvas() {
 
 //Grid Definition
 export function drawGrid(grid: Grid, numbered: boolean = true) {
-    let tileSize = new Vector(grid.size.x / grid.width, grid.size.y / grid.height)
+    let tileSize = grid.tileSize
     grid.content.forEach((row, indexR) => {
         row.forEach((tile, indexC) => {
             let currentPos = new Vector(grid.pos.x + indexC * tileSize.x, grid.pos.y + indexR * tileSize.y)

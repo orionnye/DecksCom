@@ -11,6 +11,9 @@ export class Vector {
     add(that: Vector) {
         return new Vector(this.x + that.x, this.y + that.y)
     }
+    cross(that: Vector) {
+        return new Vector(this.x * that.x, this.y * that.y)
+    }
     multiply(that: number) {
         return new Vector(this.x * that, this.y * that)
     }

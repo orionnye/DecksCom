@@ -63,13 +63,14 @@ function update() {
 }
 //State Display
 function render() {
-
   clearCanvas()
   drawGrid(state.map)
   //draws player
   fillCell(playerMain.pos, state.map, "red")
   // c.drawImage(treant, 0, 0, 300, 300)
-  c.drawImage(rogue, 0, 0, 50, 50)
+  let playerCell = playerMain.pos.cross(state.map.tileSize); 
+  c.drawImage(rogue, playerCell.x, playerCell.y, 50, 50)
+  c.drawImage(treant, 100, 100, 100, 100)
 }
 //State Reload
 function reload() {

@@ -25,6 +25,9 @@ export default class Grid {
         this.wall = 1
         this.empty = 0
     }
+    get tileSize() {
+        return (new Vector(this.size.x / this.width, this.size.y / this.height))
+    }
     randomize(blockChance: number) {
         //TEMPORARY PLACEHOLDER NUMBER
         this.content.forEach((row, IRow) => {
